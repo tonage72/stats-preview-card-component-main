@@ -32,16 +32,24 @@ main {
     align-items: center;
     text-align: center;
     max-width: 90%;
+    margin-top: 1rem;
     margin-bottom: 1rem;
+    border-radius: .5rem;
+}
+
+figure {
+    background-color: hsl(277, 64%, 61%);
+    border-radius: .5rem;
 }
 
 main img {
     width: 100%;
-    margin-bottom: 2rem;
-    opacity: 0;
+    opacity: .5;
+    border-radius: .5rem;
 }
 
 .p1 {
+    margin-top: 2rem;
     margin-bottom: 2rem;
     font-family: 'Lexend Deca', sans-serif;
     font-size: 2rem;
