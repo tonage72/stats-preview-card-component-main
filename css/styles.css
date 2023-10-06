@@ -62,10 +62,12 @@ main img {
 }
 
 ul li:nth-child(odd) {
+    font-weight: 700;
     font-size: 2rem;
 }
 
 ul li:nth-child(even) {
+    text-transform: uppercase;
     margin-bottom: 1rem;
     color: hsla(0, 0%, 100%, 0.6);
 }
@@ -78,4 +80,12 @@ ul li:nth-child(even) {
     font-size: 11px;
     text-align: center;
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 376px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
