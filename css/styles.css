@@ -15,7 +15,6 @@ ul {
 }
 
 body {
-    height: 100%;
     background-color: black;
     color: white;
     font-family: 'Inter', sans-serif;
@@ -83,9 +82,77 @@ ul li:nth-child(even) {
 }
 
 @media (min-width: 376px) {
+    body {
+        height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
     main {
+        max-width: 60%;
+        padding-left: 3rem;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        text-align: left;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "p1 figure"
+            "p2 figure"
+            "ul figure";
+    }
+
+    .p1 {
+        grid-area: p1;
+    }
+
+    .p2 {
+        grid-area: p2;
+    }
+
+    ul {
+        grid-area: ul;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 1.5rem auto;
+        grid-template-areas: "stats1 stats2 stats3"
+            "desc1 desc2 desc3";
+    }
+
+    ul li:nth-child(odd) {
+        font-size: 1rem;
+    }
+
+    ul li:nth-child(even) {
+        font-size: .5rem;
+    }
+
+    ul li:nth-child(1) {
+        grid-area: stats1;
+    }
+
+    ul li:nth-child(3) {
+        grid-area: stats2;
+    }
+
+    ul li:nth-child(5) {
+        grid-area: stats3;
+    }
+
+    ul li:nth-child(2) {
+        grid-area: desc1;
+    }
+
+    ul li:nth-child(4) {
+        grid-area: desc2;
+    }
+
+    ul li:nth-child(6) {
+        grid-area: desc3;
+    }
+
+    figure {
+        grid-area: figure;
+        margin-left: 3rem;
     }
 }
