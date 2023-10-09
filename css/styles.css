@@ -118,10 +118,12 @@ ul li:nth-child(even) {
 
     .p1 {
         grid-area: p1;
+        font-size: 2.5rem;
     }
 
     .p2 {
         grid-area: p2;
+        font-size: 1.1rem;
     }
 
     ul {
